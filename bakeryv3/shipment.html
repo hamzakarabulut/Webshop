@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlung und Versand</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="javaScript/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+
+<body style="background-color: #e6ddd6; ">
+    <header>
+        <div class="container_nav" id="navbar">
+            <nav id="navbar">
+                <ul>
+                    <li><img src="img/logoHatT.png" alt="logo" style="width: 30%; height:30%;"></li>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="cake.php">Kuchen/Torten</a></li>
+                    <li><a href="muffin.php">Muffin</a></li>
+                    <li><a href="drinks.php">Getr&auml;nke</a></li>
+                </ul>
+            </nav>
+            <nav id="navbar" class="space">
+                <ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="fontawesome/svgs/solid/user-circle.svg" alt="account" width="20" height="20">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="orders.php">Meine Bestellungen</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="php/logout.php">Logout</a>
+                        </div>
+                    </li>
+                    <li><a href="contactForm.html"><img src="fontawesome/svgs/solid/envelope.svg" alt="account"
+                                width="20" height="20"></a></li>
+                    <li><a href="cart.php"><img src="fontawesome/svgs/solid/shopping-cart.svg" alt="account" width="20"
+                                height="20"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+          <div class="container-footer container marketing">
+              <div class="col-6" style="margin-left: 28%;">
+            <h5><strong>Zahlung und Versand</strong></h5>
+            <p>Es gelten folgende Bedingungen:</p>
+            <h5><strong>Versandbedingungen</strong></h5>
+            <p>Die Lieferung erfolgt im Inland (Deutschland)</p>
+            <h5><strong>Versandkosten (inklusive gesetzliche Mehrwertsteuer)</strong></h5>
+            <h5><strong>Standardversand Inland</strong></h5>
+            <p>Für Standardversand berechnen wir keine Versandkosten.<br></p>
+            
+            
+            <h5><strong>Express-Versand (Nur Inland)</strong></h5>
+            <p>Für Express-Versand fallen Versandkosten in Höhe von 5,00 € pro Bestellung an.<br></p>
+            <h5><strong>Lieferfristen Inland</strong></h5>
+            <p>Soweit im jeweiligen Angebot keine andere Frist angegeben ist, erfolgt beim Standardversand die Lieferung
+                der Ware bei Bestellungen, die bis 08:00 Uhr morgens abgesendet wurden innerhalb von 2 - 3 Tagen ab dem
+                nächsten Backtag; bei Bestellungen, die nach 08:00 Uhr abgesendet wurden innerhalb von 2 - 3 Tagen ab
+                dem übernächsten Backtag nach Vertragsschluss (bei vereinbarter Vorauszahlung nach dem Zeitpunkt Ihrer
+                Zahlungsanweisung).</p>
+            
+            <p>Beim Express-Versand (nur Inland) erfolgt die Lieferung der Ware bei Bestellungen, die bis 08 Uhr morgens
+                abgesendet wurden, bis 12 Uhr am folgenden Tag des nächsten Backtages; bei Bestellungen, die
+                nach 08.00 Uhr morgens abgesendet wurden bis 12 Uhr am folgenden Tag des übernächsten Backtages
+                nach Vertragsschluss (bei vereinbarter Vorauszahlung nach dem Zeitpunkt der Zahlungsanweisung).</p>
+            <p>Unsere Backtage sind: Montag, Dienstag, Mittwoch, Donnerstag, Freitag</p>
+            <h5><strong> Zahlungsbedingungen</strong></h5>
+            <p>Akzeptiert Zahlungsmöglichkeiten:</p>
+            <p> Zahlung per MasterCard<br> Zahlung per Visa<br> Zahlung per American Express<br> Zahlung per Discover<br></p>
+            <p>Bei Fragen finden Sie unsere Kontaktdaten im Impressum.</p></div>
+            
+        </div>
+
+
+    <!--footer-->
+    <footer>
+        <div class="row" id="footerStyle" style="text-align: center;">
+
+            <div class="col">
+                <img src="img/logoTransperent.png" alt="logo"
+                    style="width: 50%; height:auto; padding-top: 8px; padding-bottom: 8px;">
+            </div>
+
+            <div class="col">
+                <br><br>
+                <b>
+                    <p>Recht und Datenschutz</p>
+                </b>
+                <ul>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="Datensschutzaerklerung.html">Datenschutzerklärung</a></li>
+                    <li><a href="AGB.html">AGB</a></li>
+                    <li><a href="shipment.html">Zahlung und Versand</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <br><br>
+                <b>
+                    <p>Bezahlarten</p>
+                </b>
+                <ul>
+                    <li><img src="fontawesome/svgs/brands/cc-visa.svg" alt="visa" width="8%" height="auto">
+                        <img src="fontawesome/svgs/brands/cc-discover.svg" alt="visa" width="8%" height="auto">
+                        <img src="fontawesome/svgs/brands/cc-mastercard.svg" alt="visa" width="8%" height="auto">
+                        <img src="fontawesome/svgs/brands/cc-amex.svg" alt="visa" width="8%" height="auto">
+                    </li>
+                </ul>
+                <b>
+                    <p>Social Media</p>
+                </b>
+                <ul>
+                    <li><a href="#"><img src="fontawesome/svgs/brands/instagram.svg" alt="instagram" width="7%"
+                                height="auto"></a>
+                        <a href="#"><img src="fontawesome/svgs/brands/facebook-square.svg" alt="facebook" width="7%"
+                                height="auto"></a>
+                        <a href="#"><img src="fontawesome/svgs/brands/twitter.svg" alt="twitter" width="7%"
+                                height="auto"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <br><br>
+                <b>
+                    <p>Kugemu Bakery</p>
+                </b>
+                <ul>
+                    <li>Sitz der B&auml;ckerei</li>
+                    <li>Alteburgstra&szlig;e 150</li>
+                    <li>72762 Reutlingen</li>
+                    <li><a href="contactForm.html">Kontakt</a></li>
+                    <li><a href="php/welcome.php">Zur Begrü&szlig;ung</a></li>
+                    <li id="updateUser"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateUserStatus() {
+            $.ajax({
+                url: 'php/updateOnlinestatus.php',
+                type: 'post',
+
+                success: function (response) {
+                    $("#updateUser").html(response);
+                }
+            });
+        };
+
+        updateUserStatus();
+
+        setInterval(function () {
+            updateUserStatus();
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

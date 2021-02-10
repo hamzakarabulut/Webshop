@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="javaScript/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="hashAlgo.js"></script>
+    
+    <title>LOGIN</title>
+    <style>
+        a:hover{
+            text-decoration: none;
+            color: #6E8699;
+        }
+    </style>
+</head>
+    <body>
+        <div class="login-reg-panel">
+                <div class="register-info-box">
+                    <h2>Noch kein Konto?</h2>
+                    <button class="register_button" for="log-login-show" onclick="window.location.href ='signIn.html'">Registrieren</button>
+                </div>
+                <div class="firstLogin-info-box">
+                    <h2>Registrierung best&auml;tigen?</h2>
+                    <button class="register_button" for="log-login-show" onclick="window.location.href ='firstLogin.html'">Bestätigen</button>
+                </div>
+                                    
+                <div class="white-panel">
+                    <div class="login-show">
+                        <form name="form1" class="form-signin" action="php/login.php" method="post" onsubmit="hashPassword()">
+                            <h2 style="color: #9c4f23;">LOGIN</h2>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email" required autofocus>
+                            <!-- <input type="password" id="password" name="password" class="form-control"  placeholder="Passwort" required> -->
+                            <input type="password" id="password" class="form-control"  placeholder="Passwort" required>
+                            <input type="hidden" id="hashedPassword" name="hashedPassword">
+                            <input style="color: #9c4f23;" type="submit" value="Login" class="register-button">
+                            <a href="reset-password.html">Passwort vergessen?</a>
+                        </form><img src="img/logoTransperent.png" alt="logo" style="width: 50%;height: 50%;float: right;transform: translateY(-15%);">
+                    </div>
+
+                    
+                </div>
+        </div>
+        
+        <script>
+            function validateForm() {
+                var email = document.forms['form1'][0].value;
+                var password = document.forms['form1'][1].value;
+                if (email == null || email == "") {
+                     swal("Bitte geben Sie eine gültige E-Mail Adresse ein");
+                     
+                   return false;
+                 }
+                 if (password == null || password == "") {
+                    swal("Bitte geben Sie ein gültiges Passwort ein");  
+                 return false;
+                 }
+            }
+
+
+            function hashPassword(){
+            var password = document.getElementById('password').value;
+            $(document).ready(function()
+            {
+                $('#hashedPassword').val(SHA512(password));
+            });
+            }
+           
+
+
+
+        </script>
+       
+            
+    </body>
+</html>

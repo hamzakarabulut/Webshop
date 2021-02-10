@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="javaScript/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="css/signIn.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+  <script src="hashAlgo.js"></script>
+  <title>FIRST LOGIN</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-xl-7 mx-auto">
+        <div class="card card-signin flex-row my-5">
+
+
+          <div class="card-body">
+
+            <h5 class="card-title text-center">Passwort &auml;ndern <img src="fontawesome/svgs/solid/info-circle.svg"
+                alt="SVG mit img Tag laden" width="20" height="20" onclick="info()">
+            </h5>
+            <form class="form-signin" name="form1" action="php/firstLogin.php" method="POST" onsubmit="validateForm()">
+
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required
+                  autofocus>
+                <label for="inputEmail">Email</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="oldPassword" class="form-control" placeholder="Altes Passwort" required>
+                <label for="oldPassword">Altes Passwort</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="newPassword" class="form-control" placeholder="Neues Passwort" required>
+                <label for="newPassword">Neues Passwort</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="newPasswordConfirm" class="form-control" placeholder="Neues Passwort wiederholen"
+                  required>
+                <label for="newPasswordConfirm">Neues Passwort wiederholen</label>
+              </div>
+              <div class="form-label-group">
+
+                <input type="hidden" id="hashedPasswordNew" name="hashedPasswordNew">
+              </div>
+              <div class="form-label-group">
+                <input type="hidden" id="hashedPasswordConfirm" name="hashedPasswordConfirm">
+              </div>
+              <div class="form-label-group">
+                <input type="hidden" id="hashedPassword" name="hashedPassword">
+              </div>
+
+
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase"
+                style="background-color: 	#9c4f23; opacity: 0.75;" type="submit">Best&auml;tigen</button>
+              <a class="d-block text-center mt-2 small" href="index.html">Login</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function validateForm() {
+      var email = document.forms['form1'][0].value;
+      var password = document.forms['form1'][1].value;
+      var newPassword = document.forms['form1'][2].value;
+      var newPasswordConfirm = document.forms['form1'][3].value;
+
+      if (email == null || email == "") {
+        swal("Bitte geben Sie eine gültige E-Mail Adresse ein", "", "error");
+        return false;
+      }
+      if (password == null || password == "") {
+        swal("Bitte geben Sie ein gültiges Passwort ein", "", "error");
+        return false;
+      }
+      if (newPassword == null || newPassword == "") {
+        swal("Bitte geben Sie ein gültiges Passwort ein", "", "error");
+        return false;
+      } if (newPasswordConfirm == null || newPasswordConfirm == "") {
+        swal("Bitte geben Sie ein gültiges Passwort ein", "", "error");
+        return false;
+      } else if (newPassword != newPasswordConfirm) {
+        alert("Passwörter stimmen nicht überein!");
+        header("Location: firstLogin.html");
+        return false;
+      } else {
+        hashPassword();
+      }
+    }
+    // ADD INFO WHAT TO DO + EMAIL AND LOGIN 
+    function info() {
+      swal("Geben sie das Passwort aus ihrer email-adresse ein und vergeben sie ein neues");
+    }
+
+    // //AJAX check if passwords are the same
+    // $(function(){
+    //     $("#inputPassword").change(function(){
+    //       var passwordNew = sha512(document.getElementById('newPassword').value);
+    //       var passwordNewConfirm = sha512(document.getElementById('newPasswordConfirm').value);
+    //       if(userName != ''){
+    //         $.ajax({
+    //             url: 'php/check_Passwords.php',
+    //             type: 'post',
+    //             data: {passwordNew:passwordNew, 
+    //                     passwordNewConfirm:passwordNewConfirm},
+    //             success: function(response){
+    //               // Show response
+    //               $("#password_response").html(response);
+    //             }
+    //         });
+    //       }else{
+    //         $("#password_response").html("");
+    //       }
+    //     });
+    //   });
+
+
+    function hashPassword() {
+
+      var passwordOld = document.getElementById('oldPassword').value;
+      var passwordNew = document.getElementById('newPassword').value;
+      var passwordNewConfirm = document.getElementById('newPasswordConfirm').value;
+      $(document).ready(function () {
+        $('#hashedPassword').val(SHA512(passwordOld));
+        $('#hashedPasswordNew').val(SHA512(passwordNew));
+        $('#hashedPasswordConfirm').val(SHA512(passwordNewConfirm));
+      });
+    }
+
+  </script>
+</body>
+
+</html>

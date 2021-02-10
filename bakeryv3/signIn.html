@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="javaScript/jquery-3.min.js"></script>   
+    <link rel="stylesheet" href="css/signIn.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+
+    <title>REGISTRIEREN</title>
+</head>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-xl-7 mx-auto">
+          <div class="card card-signin flex-row my-5">
+            
+
+            <div class="card-body">
+
+            <!-- ADD INFO WHAT TO DO + EMAIL AND LOGIN -->
+              <h5 class="card-title text-center">Registrieren <img src="fontawesome/svgs/solid/info-circle.svg" alt="SVG mit img Tag laden" width="20" height="20" onclick="info()">
+              </h5>
+              <form class="form-signin" name="form1" action="php/signIn.php" method="post">
+                <div class="form-label-group">
+                  <input type="text" id="inputUsername" name="userName" class="form-control" placeholder="Username"  required autofocus>
+                  <label for="inputUserame">Username</label>
+                  <div id="userName_response"></div>
+                </div>
+  
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required>
+                  <label for="inputEmail">Email</label>
+                  <div id="email_response"></div>
+                </div>
+  
+                <div class="form-label-group">
+                  <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Vorname" required>
+                  <label for="inputFirstName">Vorname</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" id="surname" name="surname" class="form-control" placeholder="Nachname" required>
+                  <label for="inputSurname">Nachname</label>
+                </div>
+                
+  
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" style="background-color: 	#9c4f23; opacity: 0.75;" type="submit">Sign in</button>
+                <a class="d-block text-center mt-2 small" href="index.html">Login</a>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // function validateForm() {
+      //     var username= document.forms['form1'][0].value;
+      //     var email = document.forms['form1'][1].value;
+      //     var firstName = document.forms['form1'][2].value;
+      //     var surname = document.forms['form1'][3].value;
+          
+
+      //     if (userName == null || userName == "" || userName == " ") {
+      //         alert("Bitte geben Sie einen gültigen Benutzernamen ein");
+      //         return false;
+      //     }
+      //     if (email == null || email == "" || email == " ") {
+      //         alert("Bitte geben Sie eine gültige E-Mail Adresse ein");
+      //         return false;
+      //     }
+      //     if (firstName == null || firstName == "" || firstName == " ") {
+      //         alert("Bitte geben Sie Ihren Vornamen ein");
+      //         return false;
+      //     }
+      //     if (surname == null || surname == "" || surname == " ") {
+      //         alert("Bitte geben Sie Ihren Nachnahmen ein");
+      //         return false;
+      //     }
+      // }
+
+      function info(){
+        swal("Nach der erfolgreichen Registrierung erhalten sie eine Mail.");
+      }
+
+
+      //AJAX um auf schon vergebene Usernamen und Email aufmerksam zu machen
+      $(function(){
+        $("#inputUsername").change(function(){
+          var userName = $(this).val().trim();
+          if(userName != ''){
+            $.ajax({
+                url: 'php/check_Username.php',
+                type: 'post',
+                data: {userName:userName},
+                success: function(response){
+                  // Show response
+                  $("#userName_response").html(response);
+                }
+            });
+          }else{
+            $("#userName_response").html("");
+          }
+        });
+      });
+
+      $(function(){
+        $("#inputEmail").change(function(){
+          var email = $(this).val().trim();
+          if(email != ''){
+            $.ajax({
+                url: 'php/check_Email.php',
+                type: 'post',
+                data: {email:email},
+                success: function(response){
+                  // Show response
+                  $("#email_response").html(response);
+                }
+            });
+          }else{
+            $("#email_response").html("");
+          }
+        });
+      });
+
+      
+  </script>
+  </body>
+</html>

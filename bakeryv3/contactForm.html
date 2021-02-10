@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="javaScript/jquery-3.min.js"></script>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/signIn.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css">
+  <title>Kontakt</title>
+
+
+  <style>
+    textarea {
+      border-radius: 1rem;
+      outline: none;
+      line-height: 1.5;
+      color: #495057;
+      border-color: #49505750;
+      margin-left: 4px;
+      
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container_nav" id="navbar">
+      <nav id="navbar">
+        <ul>
+          <li><img src="img/logoHatT.png" alt="logo" style="width: 30%; height:30%;"></li>
+          <li><a href="home.html">Home</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li><a href="cake.php">Kuchen/Torten</a></li>
+          <li><a href="muffin.php">Muffin</a></li>
+          <li><a href="drinks.php">Getr&auml;nke</a></li>
+        </ul>
+      </nav>
+      <nav id="navbar" class="space">
+        <ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="fontawesome/svgs/solid/user-circle.svg" alt="account" width="20" height="20">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="orders.php">Meine Bestellungen</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="php/logout.php">Logout</a>
+            </div>
+          </li>
+          <li><a href="contactForm.html"><img src="fontawesome/svgs/solid/envelope.svg" alt="account" width="20" height="20"></a></li>
+          <li><a href="cart.php"><img src="fontawesome/svgs/solid/shopping-cart.svg" alt="account" width="20" height="20"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+
+          <div class="card-body">
+
+            <h6 class="card-title text-center" id="contact-margin">Kontaktformular</h6>
+            <form class="form-signin" name="form1" action="php/contactForm.php" method="POST"
+              onsubmit="return validateForm()">
+
+              <div class="form-label-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Name" autofocus>
+                <label for="name">Name</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required>
+                <label for="inputEmail">Email</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="betreff" name="betreff" class="form-control" placeholder="Betreff" required>
+                <label for="betreff">Betreff</label>
+              </div>
+
+              <div class="form-label-group">
+                <textarea name="nachricht" id="nachricht"  cols="95" rows="5" required></textarea>
+                <label for="nachricht"></label>
+              </div>
+
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Nachricht absenden</button>
+              <a class="d-block text-center mt-2 small" href="home.html">Home</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+  <footer>
+    <div class="row" id="footerStyle" style="text-align: center;">
+
+      <div class="col">
+        <img src="img/logoTransperent.png" alt="logo" style="width: 50%; height:auto; padding-top: 8px; padding-bottom: 8px;">
+      </div>
+
+      <div class="col">
+        <br><br>
+        <b>
+          <p>Recht und Datenschutz</p>
+        </b>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="Datensschutzaerklerung.html">Datenschutzerklärung</a></li>
+          <li><a href="AGB.html">AGB</a></li>
+          <li><a href="shipment.html">Zahlung und Versand</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <br><br>
+        <b>
+          <p>Bezahlarten</p>
+        </b>
+        <ul>
+          <li><img src="fontawesome/svgs/brands/cc-visa.svg" alt="visa" width="8%" height="auto">
+            <img src="fontawesome/svgs/brands/cc-discover.svg" alt="visa" width="8%" height="auto">
+            <img src="fontawesome/svgs/brands/cc-mastercard.svg" alt="visa" width="8%" height="auto">
+            <img src="fontawesome/svgs/brands/cc-amex.svg" alt="visa" width="8%" height="auto">
+          </li>
+        </ul>
+        <b>
+          <p>Social Media</p>
+        </b>
+        <ul>
+          <li><a href="#"><img src="fontawesome/svgs/brands/instagram.svg" alt="instagram" width="7%" height="auto"></a>
+            <a href="#"><img src="fontawesome/svgs/brands/facebook-square.svg" alt="facebook" width="7%" height="auto"></a>
+            <a href="#"><img src="fontawesome/svgs/brands/twitter.svg" alt="twitter" width="7%" height="auto"></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <br><br>
+        <b>
+          <p>Kugemu Bakery</p>
+        </b>
+        <ul>
+          <li>Sitz der B&auml;ckerei</li>
+          <li>Alteburgstra&szlig;e 150</li>
+          <li>72762 Reutlingen</li>
+          <li><a href="contactForm.html">Kontakt</a></li>
+          <li><a href="php/welcome.php">Zur Begrü&szlig;ung</a></li>
+          <li id="updateUser"></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function updateUserStatus() {
+      $.ajax({
+        url: 'php/updateOnlinestatus.php',
+        type: 'post',
+  
+        success: function (response) {
+          $("#updateUser").html(response);
+        }
+      });
+    };
+  
+    updateUserStatus();
+  
+    setInterval(function () {
+      updateUserStatus();
+    }, 1000);
+
+    
+    function validateForm() {
+      var email = document.forms['form1'][1].value;
+      var betreff = document.forms['form1'][2].value;
+      var nachricht = document.forms['form1'][3].value;
+
+
+      if (betreff == null || betreff == "" || betreff == " ") {
+        swal("Bitte geben Sie einen gültigen Betreff ein");
+        return false;
+      }
+      if (email == null || email == "") {
+        swal("Bitte geben Sie eine gültige E-Mail Adresse ein");
+        return false;
+      }
+      if (nachricht == null || nachricht == "" || betreff == " ") {
+        swal("Bitte geben Sie eine gültige Nachricht ein");
+        return false;
+      }
+    }
+
+  </script>
+ 
+
+</body>
+
+</html>

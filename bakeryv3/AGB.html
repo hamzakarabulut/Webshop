@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlung und Versand</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="javaScript/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
+<body style="background-color: #e6ddd6; ">
+    <header>
+        <div class="container_nav" id="navbar">
+            <nav id="navbar">
+                <ul>
+                    <li><img src="img/logoHatT.png" alt="logo" style="width: 30%; height:30%;"></li>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="cake.php">Kuchen/Torten</a></li>
+                    <li><a href="muffin.php">Muffin</a></li>
+                    <li><a href="drinks.php">Getr&auml;nke</a></li>
+                </ul>
+            </nav>
+            <nav id="navbar" class="space">
+                <ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="fontawesome/svgs/solid/user-circle.svg" alt="account" width="20" height="20">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="orders.php">Meine Bestellungen</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="php/logout.php">Logout</a>
+                        </div>
+                    </li>
+                    <li><a href="contactForm.html"><img src="fontawesome/svgs/solid/envelope.svg" alt="account"
+                                width="20" height="20"></a></li>
+                    <li><a href="cart.php"><img src="fontawesome/svgs/solid/shopping-cart.svg" alt="account" width="20"
+                                height="20"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-footer container marketing">
+        <div class="col-6" style="margin-left: 28%;">
+            <p><strong>Allgemeine Gesch&auml;ftsbedingungen</strong></p>
+            <h2>1.&nbsp;Geltungsbereich</h2>
+            <p>F&uuml;r alle Bestellungen &uuml;ber unseren Online-Shop gelten die nachfolgenden AGB. Unser Online-Shop
+                richtet sich ausschlie&szlig;lich an Verbraucher.</p>
+            <p>Verbraucher ist jede nat&uuml;rliche Person, die ein Rechtsgesch&auml;ft zu Zwecken abschlie&szlig;t, die
+                &uuml;berwiegend weder ihrer gewerblichen noch ihrer selbst&auml;ndigen beruflichen T&auml;tigkeit
+                zugerechnet werden k&ouml;nnen. Unternehmer ist eine nat&uuml;rliche oder juristische Person oder eine
+                rechtsf&auml;hige Personengesellschaft, die bei Abschluss eines Rechtsgesch&auml;fts in Aus&uuml;bung
+                ihrer gewerblichen oder selbst&auml;ndigen beruflichen T&auml;tigkeit handelt.</p>
+            <h2>2.&nbsp;Vertragspartner, Vertragsschluss, Korrekturm&ouml;glichkeiten</h2>
+            <p>Der Kaufvertrag kommt zustande mit CYH bakery.</p>
+            <p>Die Darstellung der Produkte im Online-Shop stellt kein rechtlich bindendes Angebot, sondern einen
+                unverbindlichen Online-Katalog dar. Sie k&ouml;nnen unsere Produkte zun&auml;chst unverbindlich in den
+                Warenkorb legen und Ihre Eingaben vor Absenden Ihrer verbindlichen Bestellung jederzeit korrigieren,
+                indem Sie die hierf&uuml;r im Bestellablauf vorgesehenen und erl&auml;uterten Korrekturhilfen nutzen.
+                Durch Anklicken des Bestellbuttons geben Sie eine verbindliche Bestellung der im Warenkorb enthaltenen
+                Waren ab. Die Best&auml;tigung des Zugangs Ihrer Bestellung erfolgt per E-Mail unmittelbar nach dem
+                Absenden der Bestellung.</p>
+            <p>Wann der Vertrag mit uns zustande kommt, richtet sich nach der von Ihnen gew&auml;hlten Zahlungsart:</p>
+            <p><strong> Rechnung, SEPA Lastschriftverfahren</strong><br /> Wir nehmen Ihre Bestellung durch Versand
+                einer Annahmeerkl&auml;rung in separater E-Mail oder durch Auslieferung der Ware innerhalb von zwei
+                Tagen an.</p>
+            <p><strong>Vorkasse </strong><br /> Wir nehmen Ihre Bestellung durch Versand einer Annahmeerkl&auml;rung in
+                separater E-Mail innerhalb von zwei Tagen an, in welcher wir Ihnen unsere Bankverbindung nennen.</p>
+            <p><strong>Kreditkarte</strong><br /> Mit Abgabe der Bestellung geben Sie Ihre Kreditkartendaten an und das
+                Kreditkartenunternehmen f&uuml;hrt eine Autorisierungspr&uuml;fung durch. Nach Ihrer Legitimation als
+                rechtm&auml;&szlig;iger Karteninhaber wird die Zahlungstransaktion automatisch eingeleitet und Ihre
+                Kreditkarte bei Abgabe der Bestellung belastet. Zum Zeitpunkt der Kreditkartenbelastung kommt der
+                Vertrag mit uns zustande.</p>
+            <p><strong>PayPal</strong><br /> Im Bestellprozess werden Sie auf die Webseite des Online-Anbieters PayPal
+                weitergeleitet. Dort k&ouml;nnen Sie Ihre Zahlungsdaten angeben und die Zahlungsanweisung an PayPal
+                best&auml;tigen. Nach Abgabe der Bestellung im Shop fordern wir PayPal zur Einleitung der
+                Zahlungstransaktion auf und nehmen dadurch Ihr Angebot an.</p>
+            <p><strong>Giropay </strong><br /> Nach Abgabe der Bestellung werden Sie auf die Webseite Ihrer Bank
+                weitergeleitet, wo Sie die Zahlungsanweisung an Ihre Bank best&auml;tigen. Dadurch kommt der Vertrag mit
+                uns zustande.</p>
+            <h2>3.&nbsp;Vertragssprache, Vertragstextspeicherung</h2>
+            <p>Die f&uuml;r den Vertragsschluss zur Verf&uuml;gung stehende(n) Sprache(n): Deutsch</p>
+            <p>Der Vertragstext wird von uns nicht gespeichert.</p>
+            <h2>4.&nbsp;Lieferbedingungen </h2>
+            <p>Zuz&uuml;glich zu den angegebenen Produktpreisen k&ouml;nnen noch Versandkosten anfallen. N&auml;here
+                Bestimmungen zu ggf. anfallenden Versandkosten erfahren Sie bei den Angeboten.</p>
+            <p>Wir liefern nur im Versandweg. Eine Selbstabholung der Ware ist leider nicht m&ouml;glich.</p>
+            <p>Wir liefern nicht an Packstationen.</p>
+            <h2>5.&nbsp;Bezahlung </h2>
+            <p>In unserem Shop stehen Ihnen grunds&auml;tzlich die folgenden Zahlungsarten zur Verf&uuml;gung:</p>
+            <p><strong>Vorkasse</strong><br /> Bei Auswahl der Zahlungsart Vorkasse nennen wir Ihnen unsere
+                Bankverbindung in separater E-Mail und liefern die Ware nach Zahlungseingang.</p>
+            <p><strong>Kreditkarte</strong><br /> Mit Abgabe der Bestellung geben Sie Ihre Kreditkartendaten an. Nach
+                Ihrer Legitimation als rechtm&auml;&szlig;iger Karteninhaber wird die Zahlungstransaktion automatisch
+                durchgef&uuml;hrt und Ihre Karte belastet. </p>
+            <p><strong>SEPA-Lastschriftverfahren</strong><br /> Mit Abgabe der Bestellung erteilen Sie uns ein
+                SEPA-Lastschriftmandat. &Uuml;ber das Datum der Kontobelastung werden wir Sie informieren (sog.
+                Prenotification). Mit Einreichung des SEPA-Lastschriftmandats fordern wir unsere Bank zur Einleitung der
+                Zahlungstransaktion auf. Die Zahlungstransaktion wird automatisch durchgef&uuml;hrt und Ihr Konto
+                belastet. Die Kontobelastung erfolgt nach Versand der Ware. Die Frist f&uuml;r die Vorabank&uuml;ndigung
+                &uuml;ber das Datum der Kontobelastung (sog. Prenotification-Frist) betr&auml;gt 7 Tage. </p>
+            <p><strong>PayPal</strong><br /> Im Bestellprozess werden Sie auf die Webseite des Online-Anbieters PayPal
+                weitergeleitet. Um den Rechnungsbetrag &uuml;ber PayPal bezahlen zu k&ouml;nnen, m&uuml;ssen Sie dort
+                registriert sein bzw. sich erst registrieren, mit Ihren Zugangsdaten legitimieren und die
+                Zahlungsanweisung an uns best&auml;tigen. Nach Abgabe der Bestellung im Shop fordern wir PayPal zur
+                Einleitung der Zahlungstransaktion auf. Die Zahlungstransaktion wird durch PayPal nach Versendung der
+                Ware automatisch durchgef&uuml;hrt. Weitere Hinweise erhalten Sie beim Bestellvorgang. </p>
+            <p><strong>Giropay </strong><br /> Nach Abgabe der Bestellung werden Sie auf die Webseite Ihrer Bank
+                weitergeleitet. Um den Rechnungsbetrag &uuml;ber Giropay bezahlen zu k&ouml;nnen, m&uuml;ssen Sie
+                &uuml;ber ein f&uuml;r Online-Banking freigeschaltetes Bankkonto verf&uuml;gen, sich entsprechend
+                legitimieren und die Zahlungsanweisung an uns best&auml;tigen. Weitere Hinweise erhalten Sie beim
+                Bestellvorgang. Die Zahlungstransaktion wird unmittelbar danach durchgef&uuml;hrt und Ihr Konto
+                belastet.</p>
+            <p><strong>Rechnung</strong><br /> Sie zahlen den Rechnungsbetrag nach Erhalt der Ware und der Rechnung per
+                &Uuml;berweisung auf unser Bankkonto. Wir behalten uns vor, den Kauf auf Rechnung nur nach einer
+                erfolgreichen Bonit&auml;tspr&uuml;fung anzubieten.</p>
+            <h2>6.&nbsp;Eigentumsvorbehalt </h2>
+            <p>Die Ware bleibt bis zur vollst&auml;ndigen Bezahlung unser Eigentum.</p>
+            <h2>7.&nbsp;Gew&auml;hrleistung und Garantien </h2>
+            <p>Es gilt das gesetzliche M&auml;ngelhaftungsrecht. Informationen zu gegebenenfalls geltenden
+                zus&auml;tzlichen Garantien und deren genaue Bedingungen finden Sie jeweils beim Produkt und auf
+                besonderen Informationsseiten im Online-Shop.</p>
+            <h2>8.&nbsp;Streitbeilegung </h2>
+            <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie <a
+                    href="https://ec.europa.eu/consumers/odr/" target="_blank">hier</a> finden. Wir sind bereit, an
+                einem au&szlig;ergerichtlichen Schlichtungsverfahren vor einer Verbraucherschlichtungsstelle
+                teilzunehmen. Zust&auml;ndig ist die Universalschlichtungsstelle des Bundes am Zentrum f&uuml;r
+                Schlichtung e.V., Stra&szlig;burger Stra&szlig;e 8, 77694 Kehl am Rhein, <a
+                    href="http://www.universalschlichtungsstelle.de" rel="noopener noreferrer"
+                    target="_blank">www.universalschlichtungsstelle.de</a>. <br> <br>
+
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <footer>
+        <div class="row" id="footerStyle" style="text-align: center;">
+
+            <div class="col">
+                <img src="img/logoTransperent.png" alt="logo"
+                    style="width: 50%; height:auto; padding-top: 8px; padding-bottom: 8px;">
+            </div>
+
+            <div class="col">
+                <br><br>
+                <b>
+                    <p>Recht und Datenschutz</p>
+                </b>
+                <ul>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="Datensschutzaerklerung.html">Datenschutzerklärung</a></li>
+                    <li><a href="AGB.html">AGB</a></li>
+                    <li><a href="shipment.html">Zahlung und Versand</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <br><br>
+                <b>
+                    <p>Bezahlarten</p>
+                </b>
+                <ul>
+                    <li><img src="fontawesome/svgs/brands/cc-visa.svg" alt="visa" width="8%" height="auto">
+                        <img src="fontawesome/svgs/brands/cc-discover.svg" alt="visa" width="8%" height="auto">
+                        <img src="fontawesome/svgs/brands/cc-mastercard.svg" alt="visa" width="8%" height="auto">
+                        <img src="fontawesome/svgs/brands/cc-amex.svg" alt="visa" width="8%" height="auto">
+                    </li>
+                </ul>
+                <b>
+                    <p>Social Media</p>
+                </b>
+                <ul>
+                    <li><a href="#"><img src="fontawesome/svgs/brands/instagram.svg" alt="instagram" width="7%"
+                                height="auto"></a>
+                        <a href="#"><img src="fontawesome/svgs/brands/facebook-square.svg" alt="facebook" width="7%"
+                                height="auto"></a>
+                        <a href="#"><img src="fontawesome/svgs/brands/twitter.svg" alt="twitter" width="7%"
+                                height="auto"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <br><br>
+                <b>
+                    <p>Kugemu Bakery</p>
+                </b>
+                <ul>
+                    <li>Sitz der B&auml;ckerei</li>
+                    <li>Alteburgstra&szlig;e 150</li>
+                    <li>72762 Reutlingen</li>
+                    <li><a href="contactForm.html">Kontakt</a></li>
+                    <li><a href="php/welcome.php">Zur Begrü&szlig;ung</a></li>
+                    <li id="updateUser"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateUserStatus() {
+            $.ajax({
+                url: 'php/updateOnlinestatus.php',
+                type: 'post',
+
+                success: function (response) {
+                    $("#updateUser").html(response);
+                }
+            });
+        };
+
+        updateUserStatus();
+
+        setInterval(function () {
+            updateUserStatus();
+        }, 1000);
+    </script>
+    
+
+</body>
+
+</html>
