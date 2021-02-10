@@ -1,0 +1,31 @@
+Projekt - Kriterien:
+
+
+1	 Login Seite
+ (Beim ersten Login, soll der User das Passwort neu vergeben)
+2	 Validierung der Daten bevor sie versendet werden (Clientseite Funktion mit JavaScript)
+(Keine leeren Formulare dürfen zum Server übertragen werden)
+3	 User Registrierung  - Neuen User im Webshop anlegen
+(Doppelte Registrierung verhindern!)
+4	 Registrierungsbestätigung => per Email + Zufälliges Kennwort verschicken
+5	 Alle Passwörter sind SHA512 verschlüsselt in Datenbank - kein MD5
+6	 Passwort vor dem Absenden verschlüsseln (auf Clientseite)
+(nur SHA512 verschlüsselte Passwörter übertragen)
+7	 Online Status der User online mit AJAX anzeigen.
+(So das man sieht, wieviele User gerade auf der Seite online sind ohne die Seite neu zu laden)
+8	 Artikelübersicht (mit ca. 10 Artikeln) anzeigen
+9	 Artikel in Warenkorb legen und kaufen
+10	 Bei der Bestellung können 2 Versandarten ausgewählt werden. / Normal oder Express(+X€)
+11	 Bestätigung per Email (Funktion) mit Artikelmenge + Artikelname + Gesamtsumme +   Versandkosten
+12	 Übersicht über gekaufte Artikel in einer Liste 
+13	 In der Übersicht ein Button mit der Funktion die gleiche Bestellung nochmal auszuführen.
+ (Soll komplett automatisch funktionieren - 1 Klick Buy again)
+14	 Unterstützung für Sonderzeichen (ä,ö,ü,...) bei der Registrierung oder bei den Artikeln
+15	 Sicherheit -  Nur eingeloggte User dürfen auf die Seite kommen
+ 16	  Auf der Startseite ein Karussell - Example:   (https://getbootstrap.com/docs/4.3/components/carousel/)
+ 17	 User wird begrüßt beim Login mit: "Hallo Mustermann, sie waren zuletzt online am       XX.XX.XXXX"
+(In der Datenbank mitspeichern wann der User zuletzt online war)
+ 18	 Lesbarkeit der Webseite
+(Design der Webseite / Übersicht)
+ 19	 Speichern der Bildschirmauflösung des Benutzers (1280x768 oder 3840x2500,...)
+(Dient dazu die Oberfläche für verscheiende Geräte zu optimieren, dazu muss man aber wissen mit welchen Auflösungen die Seite am meisten Besucht wird.
